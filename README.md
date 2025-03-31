@@ -1,87 +1,33 @@
-# Welcome to React Router!
+# Fetch Frontend Takehome
+## Intro
+Hey, I'm [Matt Vaccaro, a Product Engineer](https://www.mattvaccaro.dev/) from Houston, Texas! Stoked for you to review my work. The app is a fairly simple React app with two screens: auth and home. All data handling is managed through actions and loaders. You can learn more about this in the [React Router Docs](https://reactrouter.com/start/modes).
 
-A modern, production-ready template for building full-stack React applications using React Router.
+## Setup
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
+1. Setup the node modules like any old react app
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
-
+2. Start the app up!
 ```bash
 npm run dev
 ```
+I would include some unit and E2E tests in a project, but I ran out of time 🤷.
 
-Your application will be available at `http://localhost:5173`.
 
-## Building for Production
+## Using the app
+On the auth screen, just enter a name and a valid email. A cookie will then be added to your browser.
 
-Create a production build:
+The search feature allows you to add any number of breeds and get results. You can favorite any pup by clicking the ❤️ button, which stores it in local storage. You can manage your favorites by clicking "Edit Favorites" and selecting the X on any pup you're no longer interested in. Lastly, clicking "Show Match" will reveal which pup is destined to be your new friend.
 
-```bash
-npm run build
-```
+## Final Thoughts
+I'm pretty happy with how this little app turned out given the time I had. There are a few things I wish I could have spent more time on:
 
-## Deployment
+**Zod schema and types**– Implementing strong types for all data between the client and server.
 
-### Docker Deployment
+**Improved hydration** – Right now, every small change forces the actions to run again, which isn’t very optimal.
 
-To build and run using Docker:
+**Loading and prefetching** – The loading states are a bit rough and could be improved by implementing prefetching (which might eliminate them entirely).
 
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+**Mobile design improvements** – The mobile UI could use some more refinement.
